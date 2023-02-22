@@ -1,0 +1,35 @@
+<p>{{title}}</p>
+<p> salmos 139 
+  <br>
+  23- Oh Dios, examiname
+  , reconoce mi corazon 
+  ponme a prueba, reconoce
+  mis pensaminentos;
+  <br>
+  
+   24 -miras si voy por el camino del mal, 
+   y guiame por el camino del bien.
+
+   
+</p>
+<!--<P>tOTAL {{5 + 5}}</P>-->
+<img src="{{url}}" alt="png">
+
+<!--<p *ngIf="name "> mi nombre es: {{name}}</p>-->
+<!--si hay algo en el name entones me lo muestre si no, no-->
+
+<!--<input type="text" [(ngModel)]="name">-->
+
+
+
+<ul *ngFor="let city of cities">
+  <!--<li [ngStyle]="{'color':'white','background-color': city === 'Roma' ? 'red':'black'}">{{city}}</li>-->
+  <!--por cada city imprima cities (que es el array)-->
+  <li (click)="onCityClicked(city)"   [ngClass]="{'decorame':city === aqui }"> {{city}} </li> 
+  <!-- un array con un condicional, no aplica la clase-->
+  <!--<li [ngClass]="['decorame']">{{city}}</li>-->
+</ul>
+<div>
+  <p *ngIf="aqui"> your city is:{{aqui}}</p>
+  <input type="text" [(ngModel)]="aqui">
+</div>
